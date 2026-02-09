@@ -5,19 +5,25 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building the application..."
+                echo "Build stage - Updated version"
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running test cases..."
+                echo "Executing test cases"
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying the application..."
+                echo "Deploying application to production"
+            }
+        }
+
+        stage('Post-Deployment') {
+            steps {
+                echo "Post deployment verification completed"
             }
         }
     }
